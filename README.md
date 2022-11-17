@@ -1,8 +1,8 @@
 # ScSmOP
 ScSmOP, a universal pipeline for barcode-indexed single-cell single-molecule multiple omics data analysis. 
 
-## *The source code will be available after publication()
-*
+## *The source code will be available after publication*
+
 ## Installation 
 
     git clone https://github.com/ZhengmzLab/ScSmOP.git
