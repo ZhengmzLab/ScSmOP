@@ -3,7 +3,7 @@ ScSmOP, a universal pipeline for barcode-indexed single-cell single-molecule mul
 
 ## Installation 
 
-    git clone https://github.com/kasenjing/ScSmOP.git
+    git clone https://github.com/Zhengmzlab/ScSmOP.git
     unzip ScSmOP
     cd ScSmOP
     bash local_install_ScSmOP_dependencies.sh
@@ -32,6 +32,6 @@ Then you can run the pipeline:
     ./ChIA-Drop.sh
 
 ## Customize for your own barcoding method
-Please refer to the paper or the [wiki](https://github.com/kasenjing/ScSmOP/wiki).
+Please refer to the paper or the [wiki](https://github.com/Zhengmzlab/ScSmOP/wiki).
 ## Understand output.
-Please refer to the [wiki](https://github.com/kasenjing/ScSmOP/wiki).
+Please refer to the [wiki](https://github.com/Zhengmzlab/ScSmOP/wiki).
