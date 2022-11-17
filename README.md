@@ -3,19 +3,27 @@ ScSmOP, a universal pipeline for barcode-indexed single-cell single-molecule mul
 
 ## *Sorry, the source code will be available after publication*
 
-## Installation 
+
+## Runtime Enviroment
+
+    OS = Ubuntu 20.04.5 LTS
+    python = 3.6.15
+    R = version 4.2.2
+
+## Install ScSmOP and dependent software
 
     git clone https://github.com/ZhengmzLab/ScSmOP.git
     unzip ScSmOP
     cd ScSmOP
+   
     bash local_install_ScSmOP_dependencies.sh
-
-## Run BARP on different experiment data
+    
+## Run ScSmOP on different experiment data
 Copy the corresponding process pipeline to the directory you want to store the result, for example: ChIA-Drop.
 
     cp /path/to/ScSmOP/PipelineScript/ChIA-Drop.sh .
     
-Edit the parameters in the pipeline script including library name, input fastq, reference genome, directory of BARP.
+Edit the parameters in the pipeline script including library name, input fastq, reference genome, directory of ScSmOP.
     
     vi ChIA-Drop.sh
 
