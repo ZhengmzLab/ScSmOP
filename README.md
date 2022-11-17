@@ -32,6 +32,6 @@ Then you can run the pipeline:
     ./ChIA-Drop.sh
 
 ## Customize for your own barcoding method
-Please refer to the paper or the wiki.
+Please refer to the paper or the [wiki](https://github.com/kasenjing/ScSmOP/wiki).
 ## Understand output.
-Please refer to the wiki.
+Please refer to the [wiki](https://github.com/kasenjing/ScSmOP/wiki).
