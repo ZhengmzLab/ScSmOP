@@ -4,8 +4,8 @@ ScSmOP, a universal pipeline for barcode-indexed single-cell single-molecule mul
 ## Installation 
 
     git clone https://github.com/kasenjing/ScSmOP.git
-    unzip ScSmOP-main
-    cd ScSmOP-main
+    unzip ScSmOP
+    cd ScSmOP
     bash local_install_ScSmOP_dependencies.sh
 
 ## Run BARP on different experiment data
