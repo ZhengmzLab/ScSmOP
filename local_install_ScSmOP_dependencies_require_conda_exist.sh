@@ -168,6 +168,7 @@ ScSmOP_dir=$(pwd | sed 's/\//\\\//g')
 
 sed -i "s/REF_OF_ScSmOP/${ScSmOP_dir}/g" PipelineScript/*
 sed -i "s/REF_OF_ScSmOP/${ScSmOP_dir}/g" scsmop.sh
+chmod +x scsmop.sh
 # check installation 
 InstallSuccesss=1
 for tool in samtools macs2 bedtools Rscript bwa
