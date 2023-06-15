@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "khash.h": "c",
+        "zlib.h": "c"
+    }
+}
