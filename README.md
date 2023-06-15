@@ -137,7 +137,7 @@ We've prepared several pipelines for easy data process, if your experiment meet 
     <td t="s" id="sjs-C1">Barcode(s) length</td>
     <td t="s" id="sjs-D1">UMI length</td>
     <td t="s" id="sjs-E1" white-space: nowrap>Read structure</td>
-    <td t="s" id="sjs-F1">Parameter (-t)</td>
+    <td t="s" id="sjs-F1" white-space: nowrap>Parameter (-t)</td>
     <td t="s" id="sjs-G1">Source</td>
    </tr>
    <tr>
@@ -234,6 +234,7 @@ We've prepared several pipelines for easy data process, if your experiment meet 
   </table>
  </body>
 </html>
+
 ### Easy process
 
 Copy the corresponding process pipeline to the directory you want to store the result, for example: ChIA-Drop.
