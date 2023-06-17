@@ -22,7 +22,7 @@ which conda
 CondaDir="$(pwd)/miniconda3/"
 source miniconda3/bin/activate
 conda config --add channels conda-forge
-conda create -n ScSmOP python=3.6 -y -c conda-forge
+conda create -n ScSmOP python -y -c conda-forge
 ScSmOPCondaDir="$(pwd)/miniconda3/envs/ScSmOP"
 
 source ${CondaDir}/bin/activate ScSmOP
