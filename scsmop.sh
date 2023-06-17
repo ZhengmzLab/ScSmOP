@@ -161,7 +161,7 @@ then
     fi
     Input_FILES=$( echo "-1 ${read_1_str} -2 ${read_2_str}" )
     checkSTARRef ${expe_type}
-    ${barp_dir}/PipelineScript/10x_scrna-v2.sh ${name} "${Input_FILES}" ${thread} ${custom_config} ${star_ref} ${barp_dir}
+    ${barp_dir}/PipelineScript/dropseq_scrna.sh ${name} "${Input_FILES}" ${thread} ${custom_config} ${star_ref} ${barp_dir}
 elif [[ ${expe_type} == "scatac_10x_v1" ]]
 then
     if [[ ${custom_whitelist} != "-" ]];

@@ -189,16 +189,16 @@ then
         ori_config=${pipe_dir}/ConfigFiles/chia-drop_config.json
     elif [[ ${expe_type} == "dropseq" ]]
     then
-        ori_config=${pipe_dir}/ConfigFiles/dropseq_rna_config.json
+        ori_config=${pipe_dir}/ConfigFiles/dropseq_scrna_config.json
     elif [[ ${expe_type} == "scrna_10x_v3" ]]
     then
-        ori_config=${pipe_dir}/ConfigFiles/10x_rna_v3_config.json
+        ori_config=${pipe_dir}/ConfigFiles/10x_scrna_v3_config.json
     elif [[ ${expe_type} == "scrna_10x_v2" ]]
     then
-        ori_config=${pipe_dir}/ConfigFiles/10x_rna_v2_config.json
+        ori_config=${pipe_dir}/ConfigFiles/10x_scrna_v2_config.json
     elif [[ ${expe_type} == "scatac" ]]
     then
-        ori_config=${pipe_dir}/ConfigFiles/10x_atac_v2_config.json
+        ori_config=${pipe_dir}/ConfigFiles/10x_scatac_v2_config.json
     elif [[ ${expe_type} == "rdsprite" ]]
     then
         ori_config=${pipe_dir}/ConfigFiles/rdsprite_config.json

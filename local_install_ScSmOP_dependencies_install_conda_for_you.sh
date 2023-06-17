@@ -90,6 +90,11 @@ ln -s ${ScSmOPCondaDir}/bin/bwa bwa
 conda install r-base=4 -n ScSmOP -y -c conda-forge
 ln -s ${ScSmOPCondaDir}/bin/Rscript Rscript 
 
+# install r packages used by scsmop
+conda install -c r -n ScSmOP -y r-ggplot2
+conda install -c r -n ScSmOP -y r-dplyr
+conda install -c bioconda -n ScSmOP -y bioconductor-dropletutils
+
 cd ..
 ScSmOP_dir=$(pwd | sed 's/\//\\\//g')
 
@@ -129,7 +134,7 @@ if [[ $InstallSuccesss == 0 ]]
 then
     echo -e "Installation failed. Check the information above to complete the installation or re-install."
 else
-    echo -e "Installation successed."
+    echo -e "Installation succeeded."
 fi
 
 echo "Setup finished."

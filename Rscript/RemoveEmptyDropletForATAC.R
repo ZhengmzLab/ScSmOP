@@ -1,5 +1,4 @@
 suppressMessages({
-  if (!require("Matrix")) install.packages('Matrix', repos = "https://cloud.r-project.org/")
   if (!require("DropletUtils"))
   {
     if (!require("BiocManager", quietly = TRUE))

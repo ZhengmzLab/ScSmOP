@@ -27,7 +27,7 @@ then
 fi
 
 
-${BARP_DIR}/PipelineScript/BarcodeIdentification.sh -t scrna -n ${LIB_NAME} -p ${BARP_DIR} -@ ${THREAD} ${RNA_FILES} -c ${RNA_CONFIG}
+${BARP_DIR}/PipelineScript/BarcodeIdentification.sh -t dropseq -n ${LIB_NAME} -p ${BARP_DIR} -@ ${THREAD} ${RNA_FILES} -c ${RNA_CONFIG}
 
 if [[ -f BarcodeIdentification.done ]]
 then
