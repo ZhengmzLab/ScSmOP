@@ -5,6 +5,7 @@ suppressMessages({
       install.packages("BiocManager", repos = "https://cloud.r-project.org/", quiet = TRUE)
     BiocManager::install("DropletUtils", update = TRUE)
   }
+  library("Matrix")
   library("DropletUtils")
 })
 

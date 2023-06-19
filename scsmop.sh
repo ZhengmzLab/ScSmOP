@@ -171,7 +171,7 @@ then
     fi
     Input_FILES=$( echo "-1 ${read_1_str} -2 ${read_2_str} -3 ${read_3_str}" )
     checkChromSize ${expe_type}
-    ${barp_dir}/PipelineScript/scATAC.sh ${name} "${ChIADrop_FILES}" ${thread} ${custom_config} ${bwa_ref} ${chrom_size} ${barp_dir}
+    ${barp_dir}/PipelineScript/scATAC.sh ${name} "${Input_FILES}" ${thread} ${custom_config} ${bwa_ref} ${chrom_size} ${barp_dir}
 elif [[ ${expe_type} == "scarc_10x_v1" ]]
 then
     if [[ ${custom_whitelist} != "-" ]]; then echo "scARC-seq do not support custom whitelist in this version, please refer to DIY."; fi
@@ -198,7 +198,7 @@ then
     fi
     Input_FILES=$( echo "-1 ${read_1_str} -2 ${read_2_str} -3 ${read_3_str}" )
     checkChromSize ${expe_type}
-    ${barp_dir}/PipelineScript/scATAC.sh ${name} "${ChIADrop_FILES}" ${thread} ${custom_config} ${bwa_ref} ${chrom_size} ${barp_dir}
+    ${barp_dir}/PipelineScript/scATAC.sh ${name} "${Input_FILES}" ${thread} ${custom_config} ${bwa_ref} ${chrom_size} ${barp_dir}
     echo -e "\nSetting experiment type to \"scatac_10x_v1\" ...\n"
     expe_type="scatac_10x_v1"
 else

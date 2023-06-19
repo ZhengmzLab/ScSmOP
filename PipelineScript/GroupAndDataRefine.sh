@@ -228,7 +228,7 @@ then
     fi
     cd raw_matrix
     ${pipe_dir}/Tools/python3 ${pipe_dir}/PythonScript/GenerateMatrixForATAC.py ../${name}.PeakCellCount.bed
-    Rscript ${pipe_dir}/Rscript/RemoveEmptyDropletForATAC.R 
+    ${pipe_dir}/Tools/Rscript ${pipe_dir}/Rscript/RemoveEmptyDropletForATAC.R 
     cd ..
     ${pipe_dir}/Tools/python3 ${pipe_dir}/PythonScript/SynchronizeATACAndRNA.py ../RNAResult/01.BarcodeIden/${name}.CELL.idb ../01.BarcodeIden/${name}.CELL.idb ${name}.PeakCellCount.bed 4
     grep -v ATAC ${name}.PeakCellCount.bedSyn > ${name}.Overlap.PeakCellCount.bed
@@ -247,7 +247,7 @@ then
     fi
     cd translated_raw_matrix
     ${pipe_dir}/Tools/python3 ${pipe_dir}/PythonScript/GenerateMatrixForATAC.py ../${name}.Overlap.PeakCellCount.bed
-    Rscript ${pipe_dir}/Rscript/RemoveEmptyDropletForATAC.R 
+    ${pipe_dir}/Tools/Rscript ${pipe_dir}/Rscript/RemoveEmptyDropletForATAC.R 
     cd ..
 
     if [[ ! -d translated_filtered_matrix ]]
@@ -295,7 +295,7 @@ then
     fi
     cd raw_matrix
     ${pipe_dir}/Tools/python3 ${pipe_dir}/PythonScript/GenerateMatrixForATAC.py ../${name}.PeakCellCount.bed
-    Rscript ${pipe_dir}/Rscript/RemoveEmptyDropletForATAC.R 
+    ${pipe_dir}/Tools/Rscript ${pipe_dir}/Rscript/RemoveEmptyDropletForATAC.R 
     cd ..
     if [[ ! -d filtered_matrix ]]
     then

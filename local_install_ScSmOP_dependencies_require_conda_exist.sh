@@ -3,7 +3,7 @@
 ## preform local installation with conda already activated.
 # check conda exist
 OriConda=$( which conda )
-OriActivate=$( which conda | sed 's/\/bin\/conda/\bin\/activate' )
+OriActivate=$( which conda | sed 's/\/bin\/conda/\/bin\/activate/' )
 if [[ -f ${OriConda} ]]
 then 
     ExistedScSmOP=$( ${OriConda} env list | awk '{if($1=="ScSmOP") print $NF}' )
