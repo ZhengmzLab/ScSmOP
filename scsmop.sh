@@ -180,10 +180,10 @@ then
     checkChromSize ${expe_type}
     ATAC_Input_FILES=$( echo "-1 ${read_1_str} -2 ${read_2_str} -3 ${read_3_str}" )
     GEX_Input_FILES=$( echo "-1 ${read_4_str} -2 ${read_5_str}" )
-    atac_config="scarc-atac_config.json"
-    gex_config="scarc-rna_config.json"
+    atac_config="10x_scarc-atac_config.json"
+    gex_config="10x_scarc-rna_config.json"
     checkChromSize ${expe_type}
-    ${barp_dir}/PipelineScript/scarc.sh ${name} "${ATAC_Input_FILES}" "${GEX_Input_FILES}" ${thread} ${atac_config} ${rna_config} ${star_ref} ${bwa_ref} ${chrom_size} ${barp_dir}
+    ${barp_dir}/PipelineScript/scarc.sh ${name} "${ATAC_Input_FILES}" "${GEX_Input_FILES}" ${thread} ${atac_config} ${gex_config} ${star_ref} ${bwa_ref} ${chrom_size} ${barp_dir}
 elif [[ ${expe_type} == "scrna" ]]
 then
     echo -e "\nYou need to be more specific about the experiment to \"scrna_10x_v2\", \"scrna_10_v3\" or \"dropseq\"."

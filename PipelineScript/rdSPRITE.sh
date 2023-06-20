@@ -30,7 +30,7 @@ fi
 
 ${BARP_DIR}/Tools/trim_galore --paired --gzip --cores ${THREAD} --quality 20 --fastqc ${rdSPRITE_Read_1} ${rdSPRITE_Read_2} --basename ${LIB_NAME} --path_to_cutadapt ${BARP_DIR}/Tools/cutadapt
 
-${BARP_DIR}/PipelineScript/BarcodeIdentification.sh -n ${LIB_NAME} -p ${BARP_DIR} -1 ${LIB_NAME}_val_1.fq.gz -2 ${LIB_NAME}_val_2.fq.gz -@ ${THREAD} -c ${CUSTOM_CONFIG_FILE}
+${BARP_DIR}/PipelineScript/BarcodeIdentification.sh -t rdsprite -n ${LIB_NAME} -p ${BARP_DIR} -1 ${LIB_NAME}_val_1.fq.gz -2 ${LIB_NAME}_val_2.fq.gz -@ ${THREAD} -c ${CUSTOM_CONFIG_FILE}
 if [[ -f BarcodeIdentification.done ]]
 then
     ${BARP_DIR}/PipelineScript/SequenceAlignment.sh -n ${LIB_NAME} -p ${BARP_DIR} -f ${BWA_REF_GENOME} -@ ${THREAD} -g ${STAR_REF_GENOME}

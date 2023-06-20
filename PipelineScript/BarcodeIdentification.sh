@@ -205,6 +205,9 @@ then
     elif [[ ${expe_type} == "scsprite" ]]
     then
         ori_config=${pipe_dir}/ConfigFiles/scsprite_config.json
+    else
+        echo -e "Neither configuration file nor experiment type provided, provide experiment type with -t or configuration file with -c "
+        exit 1
     fi
 else
     if [[ -f ${config} ]]

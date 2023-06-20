@@ -9,10 +9,10 @@ do
     if [[ $cnt == 4 ]]; then THREAD=$i; fi
     if [[ $cnt == 5 ]]; then ATAC_CONFIG=$i; fi
     if [[ $cnt == 6 ]]; then RNA_CONFIG=$i; fi
-    if [[ $cnt == 6 ]]; then STAR_REF_GENOME=$i; fi
-    if [[ $cnt == 6 ]]; then BWA_REF_GENOME=$i; fi
-    if [[ $cnt == 6 ]]; then GENOME_SIZE_FILE=$i; fi
-    if [[ $cnt == 7 ]]; then TBARP_DIR=$i; fi
+    if [[ $cnt == 7 ]]; then STAR_REF_GENOME=$i; fi
+    if [[ $cnt == 8 ]]; then BWA_REF_GENOME=$i; fi
+    if [[ $cnt == 9 ]]; then GENOME_SIZE_FILE=$i; fi
+    if [[ $cnt == 10 ]]; then TBARP_DIR=$i; fi
     (( cnt++ ))
 done
 
@@ -31,7 +31,7 @@ then
 fi
 
 
-${BARP_DIR}/PipelineScript/BarcodeIdentification.sh -t scrna -n ${LIB_NAME} -p ${BARP_DIR} ${RNA_FILES} -@ ${THREAD} -c ${RNA_CONFIG}
+${BARP_DIR}/PipelineScript/BarcodeIdentification.sh -t scrna_10_v3 -n ${LIB_NAME} -p ${BARP_DIR} ${RNA_FILES} -@ ${THREAD} -c ${RNA_CONFIG}
 
 if [[ -f BarcodeIdentification.done ]]
 then

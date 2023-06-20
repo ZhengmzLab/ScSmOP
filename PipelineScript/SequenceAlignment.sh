@@ -67,6 +67,16 @@ FinishSuccess=1
 
 PreDir=$(pwd)
 
+if [[ ( ! ${bwa_ref} =~ ^/ ) && ( ! ${bwa_ref} =~ ^~ ) ]]
+then
+    bwa_ref=$( echo -e "${PreDir}/${bwa_ref}" )
+fi
+
+if [[ ( ! ${star_ref} =~ ^/ ) && ( ! ${star_ref} =~ ^~ ) ]]
+then
+    star_ref=$( echo -e "${PreDir}/${star_ref}" )
+fi
+
 if [[ ! -d 02.ReadAlign ]]
 then
     mkdir 02.ReadAlign

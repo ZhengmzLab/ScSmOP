@@ -245,7 +245,7 @@ Different experiment require different parameters:
 ```
     (ScSmOP) ~:$ ~/ScSmOP/scsmop.sh 
 
-    Usage: ./scsmop.sh [options] -t [STR] -n [STR] -1 [FILE] -2 [FILE] -r [DIR]
+    Usage: scsmop.sh [options] -t [STR] -n [STR] -1 [FILE] -2 [FILE] -r [DIR]
         -t Experiment type: sprite, scsprite, rdsprite, chiadrop, scrna_10x_v3, scrna_10x_v2, dropseq, scatac_10x_v1, scarc_10x_v1.
         -n Library name.
         -1 Read 1 FASTQ.
@@ -269,4 +269,4 @@ Different experiment require different parameters:
 
 ## Customize for your own barcoding method
 
-Please refer to the paper or the wiki.
+Please refer to the paper or the [wiki](https://github.com/ZhengmzLab/ScSmOP/wiki).
