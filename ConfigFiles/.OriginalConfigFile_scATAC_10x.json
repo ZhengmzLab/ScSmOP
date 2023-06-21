@@ -1,0 +1,16 @@
+{
+    "barcode chain" : [ {"BC-GENOMEA|1": "R2:1"}, {"GENOMEA|2": "R1:1"}, {"GENOMEA|2": "R1:1"}],
+    "identifier" : [ {"CELL":"BC"} ],
+    "barcode type" : 
+    {
+	"BC":
+	{
+	    "SPACE":0,
+	    "DENSE":1,
+	    "LAXITY":0,
+	    "LENGTH":16,
+	    "MISMATCH":1,
+	    "WHITE LIST":"../BarcodeBucket/737K-arc-v1-scatac.txt"
+	}
+    }
+}

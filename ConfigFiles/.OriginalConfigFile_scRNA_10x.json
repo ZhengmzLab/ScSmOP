@@ -1,0 +1,21 @@
+{
+    "barcode chain" : [ {"BC-UMI-GENOMEA|1": "R1:1"}, {"GENOMEA|2": "R2:1"}],
+    "identifier" : [ {"CELL":"BC"} ],
+    "barcode type" : 
+    {
+		"UMI":
+		{
+			"LENGTH": 12,
+			"WHITE LIST":""
+		},
+		"BC":
+		{
+			"SPACE":0,
+			"LAXITY":0,
+			"DENSE":1,
+			"LENGTH":16,
+			"MISMATCH":1,
+			"WHITE LIST":"../BarcodeBucket/737K-arc-v1-scrna.txt"
+		}
+    }
+}
