@@ -112,7 +112,7 @@ if [[ ${expe_type} == "sprite" ]]
 then
     if [[ ${custom_whitelist} != "-" ]]; then echo "SPRITE do not support custom whitelist in this version, please refer to DIY."; fi
     checkBWARef ${expe_type}
-    ${barp_dir}/PipelineScript/SPRITE.sh ${name} ${read_1_str} ${read_2_str} ${thread} ${custom_config} ${star_ref} ${bwa_ref} ${barp_dir}
+    ${barp_dir}/PipelineScript/SPRITE.sh ${name} ${read_1_str} ${read_2_str} ${thread} ${custom_config} ${bwa_ref} ${barp_dir}
 elif [[ ${expe_type} == "scsprite" ]]
 then
     if [[ ${custom_whitelist} != "-" ]]; then echo "scSPRITE do not support custom whitelist in this version, please refer to DIY."; fi

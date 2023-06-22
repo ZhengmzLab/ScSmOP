@@ -4,13 +4,12 @@ cnt=1
 for i in "$@"
 do
     if [[ $cnt == 1 ]]; then LIB_NAME=$i; fi
-    if [[ $cnt == 2 ]]; then rdSPRITE_Read_1=$i; fi
-    if [[ $cnt == 3 ]]; then rdSPRITE_Read_2=$i; fi
+    if [[ $cnt == 2 ]]; then SPRITE_Read_1=$i; fi
+    if [[ $cnt == 3 ]]; then SPRITE_Read_2=$i; fi
     if [[ $cnt == 4 ]]; then THREAD=$i; fi
     if [[ $cnt == 5 ]]; then CUSTOM_CONFIG_FILE=$i; fi
-    if [[ $cnt == 6 ]]; then STAR_REF_GENOME=$i; fi
-    if [[ $cnt == 7 ]]; then BWA_REF_GENOME=$i; fi
-    if [[ $cnt == 8 ]]; then TBARP_DIR=$i; fi
+    if [[ $cnt == 6 ]]; then BWA_REF_GENOME=$i; fi
+    if [[ $cnt == 7 ]]; then TBARP_DIR=$i; fi
     (( cnt++ ))
 done
 
@@ -26,7 +25,7 @@ fi
 
 ${BARP_DIR}/Tools/trim_galore --paired --gzip --cores ${THREAD} --quality 20 --fastqc ${SPRITE_Read_1} ${SPRITE_Read_2} --basename ${LIB_NAME} --path_to_cutadapt ${BARP_DIR}/Tools/cutadapt
 
-${BARP_DIR}/PipelineScript/BarcodeIdentification.sh -n ${LIB_NAME} -p ${BARP_DIR} -1 ${LIB_NAME}_val_1.fq.gz -2 ${LIB_NAME}_val_2.fq.gz -@ ${THREAD} -c ${CUSTOM_CONFIG_FILE}
+${BARP_DIR}/PipelineScript/BarcodeIdentification.sh -t sprite -n ${LIB_NAME} -p ${BARP_DIR} -1 ${LIB_NAME}_val_1.fq.gz -2 ${LIB_NAME}_val_2.fq.gz -@ ${THREAD} -c ${CUSTOM_CONFIG_FILE}
 
 ${BARP_DIR}/Tools/cutadapt -a GATCGGAAGAG -g file:${BARP_DIR}/BarcodeBucket/dpm96.fasta -o 01.BarcodeIden/${LIB_NAME}.R1.Barcoded.DNA.trim.fq.gz -j ${THREAD} 01.BarcodeIden/${LIB_NAME}_NDNR_1.fq 1> 01.BarcodeIden/${LIB_NAME}.R1.Barcoded.RDtrim.qc.txt 
 
