@@ -103,6 +103,11 @@ function checkChromSize
     fi
 }
 
+if [[ -f ${custom_config} ]]
+then 
+    custom_config=$( readlink -f ${custom_config} )
+fi
+
 if [[ ${expe_type} == "sprite" ]]
 then
     if [[ ${custom_whitelist} != "-" ]]; then echo "SPRITE do not support custom whitelist in this version, please refer to DIY."; fi
@@ -124,7 +129,7 @@ elif [[ ${expe_type} == "chiadrop" ]]
 then
     if [[ ${custom_whitelist} != "-" ]];
     then
-        ${barp_dir}/Tools/python3 ${barp_dir}/Pythonscript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_ChIA-Drop.json -o ${name} -w ${custom_whitelist}
+        ${barp_dir}/Tools/python3 ${barp_dir}/PythonScript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_ChIA-Drop.json -o ${name} -w ${custom_whitelist}
         custom_config=$( readlink -f ${name}_config.json )
     fi
     ChIADrop_FILES=$( echo "-1 ${read_1_str} -2 ${read_2_str}" )
@@ -136,7 +141,7 @@ elif [[ ${expe_type} == "scrna_10x_v3" ]]
 then   
     if [[ ${custom_whitelist} != "-" ]];
     then
-        ${barp_dir}/Tools/python3 ${barp_dir}/Pythonscript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_scRNA_10x.json -o ${name} -w ${custom_whitelist}
+        ${barp_dir}/Tools/python3 ${barp_dir}/PythonScript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_scRNA_10x.json -o ${name} -w ${custom_whitelist}
         custom_config=$( readlink -f ${name}_config.json )
     fi
     Input_FILES=$( echo "-1 ${read_1_str} -2 ${read_2_str}" )
@@ -146,7 +151,7 @@ elif [[ ${expe_type} == "scrna_10x_v2" ]]
 then
     if [[ ${custom_whitelist} != "-" ]];
     then
-        ${barp_dir}/Tools/python3 ${barp_dir}/Pythonscript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_scRNA_10x.json -o ${name} -w ${custom_whitelist}
+        ${barp_dir}/Tools/python3 ${barp_dir}/PythonScript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_scRNA_10x.json -o ${name} -w ${custom_whitelist}
         custom_config=$( readlink -f ${name}_config.json )
     fi
     Input_FILES=$( echo "-1 ${read_1_str} -2 ${read_2_str}" )
@@ -156,7 +161,7 @@ elif [[ ${expe_type} == "dropseq" ]]
 then
     if [[ ${custom_whitelist} != "-" ]];
     then
-        ${barp_dir}/Tools/python3 ${barp_dir}/Pythonscript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_scRNA_Dropseq.json -o ${name} -w ${custom_whitelist}
+        ${barp_dir}/Tools/python3 ${barp_dir}/PythonScript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_scRNA_Dropseq.json -o ${name} -w ${custom_whitelist}
         custom_config=$( readlink -f ${name}_config.json )
     fi
     Input_FILES=$( echo "-1 ${read_1_str} -2 ${read_2_str}" )
@@ -166,7 +171,7 @@ elif [[ ${expe_type} == "scatac_10x_v1" ]]
 then
     if [[ ${custom_whitelist} != "-" ]];
     then
-        ${barp_dir}/Tools/python3 ${barp_dir}/Pythonscript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_scATAC_10x.json -o ${name} -w ${custom_whitelist}
+        ${barp_dir}/Tools/python3 ${barp_dir}/PythonScript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_scATAC_10x.json -o ${name} -w ${custom_whitelist}
         custom_config=$( readlink -f ${name}_config.json )
     fi
     Input_FILES=$( echo "-1 ${read_1_str} -2 ${read_2_str} -3 ${read_3_str}" )
@@ -193,7 +198,7 @@ elif [[ ${expe_type} == "scatac" ]]
 then
     if [[ ${custom_whitelist} != "-" ]];
     then
-        ${barp_dir}/Tools/python3 ${barp_dir}/Pythonscript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_scATAC_10x.json -o ${name} -w ${custom_whitelist}
+        ${barp_dir}/Tools/python3 ${barp_dir}/PythonScript/PipeGenerateConfig.py -i ${barp_dir}/ConfigFiles/.OriginalConfigFile_scATAC_10x.json -o ${name} -w ${custom_whitelist}
         custom_config=$( readlink -f ${name}_config.json )
     fi
     Input_FILES=$( echo "-1 ${read_1_str} -2 ${read_2_str} -3 ${read_3_str}" )

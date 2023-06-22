@@ -1,12 +1,12 @@
 {
-    "barcode chain" : [ {"BC-UMI-GENOMEA|1": "R1:1"}, {"GENOMEA|2": "R2:1"}],
+    "barcode chain" : [ {"BC-UMI": "R1:1"}, {"GENOMEA|2": "R2:1"}],
     "identifier" : [ {"CELL":"BC"} ],
     "barcode type" : 
     {
 		"UMI":
 		{
 			"LENGTH": 12,
-			"WHITE LIST":""
+			"WHITE LIST": [ "NNNNN" ]
 		},
 		"BC":
 		{
