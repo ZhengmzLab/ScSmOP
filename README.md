@@ -4,23 +4,21 @@ Single cell Single Molecule Multiple Omics Pipeline.
 
 -----------
 
-## Summary
-
 ScSmOP is a universal pipeline capable of performing data processing for a wide range of single-cell single-molecule omics like scRNA-seq, scATAC-seq, ChIA-Drop, SPRITE and its derivates, Drop-seq and some other techniques which based on barcode and UMI. It have pre-prepared several pipelines for current popular which can be easily launched with some simple editions. Detail description and cases of study please see [ScSmOP Wiki](https://github.com/ZhengmzLab/ScSmOP/wiki).
 
-![image](https://github.com/tianzhongyuan/material/blob/main/ScSmOP_operation.png)
+![image](https://github.com/ZhengmzLab/ScSmOP/assets/88769457/89a8cd63-f1db-47a8-a24c-fc67a1d216aa)
 
-## OS env
+## 1. OS env
 
 ScSmOP is running in Ubuntu 16.4 and above.
 
-## Installation
+## 2. Installation
 
 First, download ScSmOP to your computer:
 
 ```
     # Get ScSmOP source using git
-    :~$ git clone https://github.com/ZhengmzLab/ScSmOP.git
+    :~$ git clone https://github.com/ScSmOP/ScSmOP.git
     :~$ cd ScSmOP
 
     # Alternatively, get latest ScSmOP source from releases
@@ -29,9 +27,9 @@ First, download ScSmOP to your computer:
     :~$ cd ScSmOP-0.1.3
 ```
 
-### Conda installed user
+### 2.1 Conda installed user
 
-If you are familiar with linux operate system and conda, after activate conda, you can install ScSmOP using the one-click `local_install_ScSmOP_dependencies_require_conda_exist.sh`
+If you are familiar with linux operate system and Conda, after activate conda, you can install ScSmOP using the one-click `local_install_ScSmOP_dependencies_require_conda_exist.sh`
 
 ```
     (base) :~$ bash local_install_ScSmOP_dependencies_require_conda_exist.sh
@@ -39,19 +37,19 @@ If you are familiar with linux operate system and conda, after activate conda, y
 
 It will automatically create a conda environment `ScSmOP` and install all the softwares ScSmOP required.
 
-### Do not have conda in computer
+### 2.2 Do not have Conda in computer
 
-For users who are not familiar with linux operate system or conda, we prepared one-click `local_install_ScSmOP_dependencies_install_conda_for_you.sh` to install ScSmOP:
+For users who are not familiar with linux operate system or Conda, we prepared one-click `local_install_ScSmOP_dependencies_install_conda_for_you.sh` to install ScSmOP:
 
 ```
     :~$ bash local_install_ScSmOP_dependencies_install_conda_for_you.sh
 ```
 
-It will create conda environment and install all the softwares ScSmOP required.
+It will create Conda environment and install all the softwares ScSmOP required.
 
 ***Warings during installation do not affect ScSmOP usage, ignore them.***
 
-#### Activate conda env
+**Activate Conda env**
 
 ```
     :~$ ./Tools/miniconda3/bin/conda init bash
@@ -61,13 +59,13 @@ It will create conda environment and install all the softwares ScSmOP required.
     (ScSmOP) :~$ 
 ```
 
-#### Suppose ScSmOP has been installed @
+**Suppose ScSmOP has been installed**
 
 ```
     ~/ScSmOP/
 ```
 
-## Make index for BWA
+## 3. Make index for BWA
 
 *If you have BWA index already, please ignore this step.*
 Reference [BWA manual](https://bio-bwa.sourceforge.net/bwa.shtml)
@@ -83,13 +81,13 @@ Reference [BWA manual](https://bio-bwa.sourceforge.net/bwa.shtml)
 ```
 
 
-#### Suppose BWA index has been generated @
+**Suppose BWA index has been generated**
 
 ```
     ~/RefGenome/bwa_hg38_index/
 ```
 
-## Make index for STAR
+## 4. Make index for STAR
 
 *If you have STAR index already, please ignore this step.*
 Reference [STAR manual](https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf)
@@ -116,17 +114,17 @@ Then build STAR reference genome:
 
 *Note: to build hg38 STAR reference genome require at least 32 GB memory.*
 
-#### Suppose STAR index has been generated @
+**Suppose STAR index has been generated**
 
 ```
     ~/RefGenome/refdata-gex-GRCh38-2020-A-STAR/
 ```
 
-## Run ScSmOP on different experiment data
+## 5. Run ScSmOP on different experiment data
 
 We've prepared several pipelines for easy data process, if your experiment meet the listed experiment, you can process your data as in Easy Process.
 
-### [ScSmOP Supported Techology](#ScSmOPSuppTech).
+### 5.1 [ScSmOP Supported Techology](#ScSmOPSuppTech).
 
 |Omics|Technology|Barcode(s) length|UMI length|Read structure|Method ID (-t)|
 |:----|:----|:----|:----|:----|:----|
@@ -142,7 +140,7 @@ We've prepared several pipelines for easy data process, if your experiment meet 
 
 
 
-### Easy process
+### 5.2 Easy process
 
 Copy the corresponding process pipeline to the directory you want to store the result, for example: ChIA-Drop.
 ```
@@ -174,8 +172,8 @@ Different experiment require different parameters:
    
 ```
 
-## Other Information in ScSmOP Wiki
-* [Case of Study](https://github.com/ZhengmzLab/ScSmOP/wiki/Case-of-Study)
+## 6 Other Information in ScSmOP Wiki
+* [Case Study](https://github.com/ZhengmzLab/ScSmOP/wiki/Case-Study)
 * [ScSmOP Module Configuration](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Module-Configuration)
 * [ScSmOP Standard Output](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Standard-Output)
 * [Case of DIY](https://github.com/ZhengmzLab/ScSmOP/wiki/Case-of-Study#11-diy)
