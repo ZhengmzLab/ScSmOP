@@ -50,7 +50,7 @@ This will automatically install Conda tools, create a Conda environment "ScSmOP"
 **Activate Conda env**
 
 ```
-$ ./Tools/miniconda3/bin/conda init bash
+$ /Tools/miniconda3/bin/conda init bash
 $ exit
 
 # Reopen a terminal
