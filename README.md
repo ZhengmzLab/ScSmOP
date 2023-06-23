@@ -176,5 +176,6 @@ Different experiment require different parameters:
 * [Case Study](https://github.com/ZhengmzLab/ScSmOP/wiki/Case-Study)
 * [ScSmOP Module Configuration](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Module-Configuration)
 * [ScSmOP Standard Output](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Standard-Output)
-* [Case of DIY](https://github.com/ZhengmzLab/ScSmOP/wiki/Case-of-Study#11-diy)
+* [Case of DIY](https://github.com/ZhengmzLab/ScSmOP/wiki/Case-Study#11-diy)
+
 
