@@ -27,25 +27,23 @@ First, download ScSmOP to your computer:
     :~$ cd ScSmOP-0.1.3
 ```
 
-### 2.1 Conda installed user
-
-If you are familiar with linux operate system and Conda, after activate conda, you can install ScSmOP using the one-click `local_install_ScSmOP_dependencies_require_conda_exist.sh`
-
+### 2.1 Linux has Conda:
+To install ScSmOP on a Linux system with a Conda virtual environment, you need to activate Conda first, and then install ScSmOP by executing the following command:
 ```
-    (base) :~$ bash local_install_ScSmOP_dependencies_require_conda_exist.sh
+     $ conda activate 
+    (base)$ bash local_install_ScSmOP_dependencies_require_conda_exist.sh
 ```
+This will automatically create a Conda environment "ScSmOP" and install all the software required for ScSmOP.
 
-It will automatically create a conda environment `ScSmOP` and install all the softwares ScSmOP required.
 
-### 2.2 Do not have Conda in computer
+### 2.2 Linux has no Conda:
 
-For users who are not familiar with linux operate system or Conda, we prepared one-click `local_install_ScSmOP_dependencies_install_conda_for_you.sh` to install ScSmOP:
-
+To install ScSmOP on a Linux system without a Conda virtual environment, you only need to install ScSmOP by executing the following command:
 ```
-    :~$ bash local_install_ScSmOP_dependencies_install_conda_for_you.sh
+  $ bash local_install_ScSmOP_dependencies_install_conda_for_you.sh
 ```
+This will automatically install COnda tools, create a Conda environment "ScSmOP" and install all the software required for ScSmOP.
 
-It will create Conda environment and install all the softwares ScSmOP required.
 
 ***Warings during installation do not affect ScSmOP usage, ignore them.***
 
