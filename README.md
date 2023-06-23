@@ -17,21 +17,21 @@ ScSmOP is running in Ubuntu 16.4 and above.
 First, download ScSmOP to your computer:
 
 ```
-    # Get ScSmOP source using git
-    :~$ git clone https://github.com/ScSmOP/ScSmOP.git
-    :~$ cd ScSmOP
+# Get ScSmOP source using git
+$ git clone https://github.com/ScSmOP/ScSmOP.git
+$ cd ScSmOP
 
-    # Alternatively, get latest ScSmOP source from releases
-    :~$ wget https://github.com/ZhengmzLab/ScSmOP/archive/refs/tags/v1.0.tar.gz
-    :~$ tar -zxvf v0.1.3.tar.gz
-    :~$ cd ScSmOP-0.1.3
+# Alternatively, get latest ScSmOP source from releases
+$ wget https://github.com/ZhengmzLab/ScSmOP/archive/refs/tags/v1.0.tar.gz
+$ tar -zxvf v0.1.3.tar.gz
+$ cd ScSmOP-0.1.3
 ```
 
 ### 2.1 Linux has Conda:
 To install ScSmOP on a Linux system with a Conda virtual environment, you need to activate Conda first, and then install ScSmOP by executing the following command:
 ```
-     $ conda activate 
-    (base)$ bash local_install_ScSmOP_dependencies_require_conda_exist.sh
+$ conda activate 
+(base)$ bash local_install_ScSmOP_dependencies_require_conda_exist.sh
 ```
 This will automatically create a Conda environment "ScSmOP" and install all the software required for ScSmOP.
 
@@ -40,7 +40,7 @@ This will automatically create a Conda environment "ScSmOP" and install all the 
 
 To install ScSmOP on a Linux system without a Conda virtual environment, you only need to install ScSmOP by executing the following command:
 ```
-  $ bash local_install_ScSmOP_dependencies_install_conda_for_you.sh
+$ bash local_install_ScSmOP_dependencies_install_conda_for_you.sh
 ```
 This will automatically install Conda tools, create a Conda environment "ScSmOP" and install all the software required for ScSmOP.
 
@@ -50,17 +50,18 @@ This will automatically install Conda tools, create a Conda environment "ScSmOP"
 **Activate Conda env**
 
 ```
-    :~$ ./Tools/miniconda3/bin/conda init bash
-    :~$ exit
-    # Reopen a terminal
-    (base) :~$ conda activate ScSmOP
-    (ScSmOP) :~$ 
+$ ./Tools/miniconda3/bin/conda init bash
+$ exit
+
+# Reopen a terminal
+(base)$ conda activate ScSmOP
+(ScSmOP)$ 
 ```
 
 **Suppose ScSmOP has been installed**
 
 ```
-    ~/ScSmOP/
+~/ScSmOP/
 ```
 
 ## 3. Make index for BWA
@@ -69,20 +70,20 @@ This will automatically install Conda tools, create a Conda environment "ScSmOP"
 Reference [BWA manual](https://bio-bwa.sourceforge.net/bwa.shtml)
 
 ```
-    (ScSmOP) :~$ mkdir RefGenome
-    (ScSmOP) :~$ cd RefGenome
-    (ScSmOP) :~/RefGenome$ mkdir bwa_hg38_index
-    (ScSmOP) :~/RefGenome$ cd bwa_hg38_index
-    (ScSmOP) :~/RefGenome/bwa_hg38_index$ wget https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz
-    (ScSmOP) :~/RefGenome/bwa_hg38_index$ gunzip hg38.fa.gz
-    (ScSmOP) :~/RefGenome/bwa_hg38_index$ bwa index hg38.fa
+(ScSmOP)$ mkdir RefGenome
+(ScSmOP)$ cd RefGenome
+(ScSmOP)/RefGenome$ mkdir bwa_hg38_index
+(ScSmOP)/RefGenome$ cd bwa_hg38_index
+(ScSmOP)/RefGenome/bwa_hg38_index$ wget https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz
+(ScSmOP)/RefGenome/bwa_hg38_index$ gunzip hg38.fa.gz
+(ScSmOP)/RefGenome/bwa_hg38_index$ bwa index hg38.fa
 ```
 
 
 **Suppose BWA index has been generated**
 
 ```
-    ~/RefGenome/bwa_hg38_index/
+~/RefGenome/bwa_hg38_index/
 ```
 
 ## 4. Make index for STAR
@@ -94,20 +95,20 @@ Download annotation file (gencode.v29.primary_assembly.annotation_UCSC_names.gtf
 Or make your single-cell RNA-seq result more like 10× Genomics, download the genome fasta file and gene annotation at <https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest>. The FASTA and GTF files:
 
 ```
-    refdata-gex-GRCh38-2020-A/genes/genes.gtf
-    refdata-gex-GRCh38-2020-A/fasta/genome.fa
+refdata-gex-GRCh38-2020-A/genes/genes.gtf
+refdata-gex-GRCh38-2020-A/fasta/genome.fa
 ```
 
 Then build STAR reference genome:
 
 ```
-    (ScSmOP) :~/RefGenome$ mkdir refdata-gex-GRCh38-2020-A-STAR
-    (ScSmOP) :~/RefGenome$ cd refdata-gex-GRCh38-2020-A-STAR
-    (ScSmOP) :~/RefGenome/refdata-gex-GRCh38-2020-A-STAR$ ~/ScSmOP/Tools/STAR --runThreadN 16 \
-    --runMode genomeGenerate \
-    --genomeDir . \
-    --genomeFastaFiles genome.fa \
-    --sjdbGTFfile genes.gtf 
+(ScSmOP)/RefGenome$ mkdir refdata-gex-GRCh38-2020-A-STAR
+(ScSmOP)/RefGenome$ cd refdata-gex-GRCh38-2020-A-STAR
+(ScSmOP)/RefGenome/refdata-gex-GRCh38-2020-A-STAR$ ~/ScSmOP/Tools/STAR --runThreadN 16 \
+                                                                       --runMode genomeGenerate \
+                                                                       --genomeDir . \
+                                                                       --genomeFastaFiles genome.fa \
+                                                                       --sjdbGTFfile genes.gtf 
 ```
 
 *Note: to build hg38 STAR reference genome require at least 32 GB memory.*
@@ -115,7 +116,7 @@ Then build STAR reference genome:
 **Suppose STAR index has been generated**
 
 ```
-    ~/RefGenome/refdata-gex-GRCh38-2020-A-STAR/
+(~/RefGenome/refdata-gex-GRCh38-2020-A-STAR/
 ```
 
 ## 5. Run ScSmOP on various types of data
@@ -142,13 +143,13 @@ We've prepared several pipelines for easy data process, if your experiment meet 
 
 Copy the corresponding process pipeline to the directory you want to store the result, for example: ChIA-Drop.
 ```
-    (ScSmOP) ~:$ ~/ScSmOP/scsmop.sh  -t chiadrop -n CHDP -1 CHDP_R1.fastq.gz -2 CHDP_R2.fastq.gz -b ~/RefGenome/bwa_dm3_ref/dm3.fa -s dm3.size.txt
+(ScSmOP) $ ~/ScSmOP/scsmop.sh  -t chiadrop -n CHDP -1 CHDP_R1.fastq.gz -2 CHDP_R2.fastq.gz -b ~/RefGenome/bwa_dm3_ref/dm3.fa -s dm3.size.txt
 ```
 Different experiment require different parameters:
 ```
-    (ScSmOP) ~:$ ~/ScSmOP/scsmop.sh 
+(ScSmOP) $ ~/ScSmOP/scsmop.sh 
 
-    Usage: ./scsmop.sh [options] -t [STR] -n [STR] -1 [FILE] -2 [FILE] -r [DIR]
+Usage: ./scsmop.sh [options] -t [STR] -n [STR] -1 [FILE] -2 [FILE] -r [DIR]
         -t Experiment type: sprite, scsprite, rdsprite, chiadrop, scrna_10x_v3, scrna_10x_v2, dropseq, scatac_10x_v1, scarc_10x_v1.
         -n Library name.
         -1 Read 1 FASTQ.
@@ -164,8 +165,8 @@ Different experiment require different parameters:
         -p Custom ScSmOP directory.
         -s Chromosome size file, need by chiadrop, scatac_10x_v1, scarc_10x_v1.
 
-    Processing scARC-seq, specify FASTQs through -1 ATAC R1 -2 ATAC R2 -3 ATAC R3 -4 GEX R1 -5 GEX R2, others refer to the table at Github.
-    Processing chiadrop, scatac_10x_v1, scarc_10x_v1 requires genome chromosome sizes file showing chromosome length, specify with -s [FILE].
+Processing scARC-seq, specify FASTQs through -1 ATAC R1 -2 ATAC R2 -3 ATAC R3 -4 GEX R1 -5 GEX R2, others refer to the table at Github.
+Processing chiadrop, scatac_10x_v1, scarc_10x_v1 requires genome chromosome sizes file showing chromosome length, specify with -s [FILE].
 
    
 ```
