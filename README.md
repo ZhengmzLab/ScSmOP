@@ -4,7 +4,7 @@ Single cell Single Molecule Multiple Omics Pipeline.
 
 -----------
 
-ScSmOP is a universal pipeline capable of performing data processing for a wide range of single-cell single-molecule omics like scRNA-seq, scATAC-seq, ChIA-Drop, SPRITE,RD-SPRITE, scSPRITE, Drop-seq and some other techniques which based on barcode and UMI. It have pre-prepared several pipelines for current popular which can be easily launched with some simple editions. Detail description and cases of study please see [ScSmOP Wiki](https://github.com/ZhengmzLab/ScSmOP/wiki).
+ScSmOP is a universal pipeline capable of performing data processing for a wide range of single-cell single-molecule omics like scRNA-seq, scATAC-seq, ChIA-Drop, SPRITE, RD-SPRITE, scSPRITE, Drop-seq and some other techniques which based on barcode and UMI. It have pre-prepared several pipelines for current popular which can be easily launched with some simple editions. Detail description and cases of study please see [ScSmOP Wiki](https://github.com/ZhengmzLab/ScSmOP/wiki).
 
 ![image](https://github.com/tianzhongyuan/material/blob/main/ScSmOP_operation.png)
 
