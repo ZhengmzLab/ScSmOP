@@ -24,7 +24,7 @@ First, download ScSmOP to your computer:
     :~$ cd ScSmOP
 
     # Alternatively, get latest ScSmOP source from releases
-    :~$ wget https://github.com/kasenjing/ScSmOP/archive/refs/tags/v0.1.3.tar.gz
+    :~$ wget https://github.com/ZhengmzLab/ScSmOP/archive/refs/tags/v1.0.tar.gz
     :~$ tar -zxvf v0.1.3.tar.gz
     :~$ cd ScSmOP-0.1.3
 ```
