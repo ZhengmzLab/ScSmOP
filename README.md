@@ -42,7 +42,7 @@ To install ScSmOP on a Linux system without a Conda virtual environment, you onl
 ```
   $ bash local_install_ScSmOP_dependencies_install_conda_for_you.sh
 ```
-This will automatically install COnda tools, create a Conda environment "ScSmOP" and install all the software required for ScSmOP.
+This will automatically install Conda tools, create a Conda environment "ScSmOP" and install all the software required for ScSmOP.
 
 
 ***Warings during installation do not affect ScSmOP usage, ignore them.***
