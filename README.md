@@ -6,7 +6,9 @@ Single cell Single Molecule Multiple Omics Pipeline.
 
 ## Summary
 
-ScSmOP is a universal pipeline capable of performing data processing for a wide range of single-cell single-molecule omics like scRNA-seq, scATAC-seq, ChIA-Drop, SPRITE and its derivates, Drop-seq and some other techniques which based on barcode and UMI. It have pre-prepared several pipelines for current popular which can be easily launched with some simple editions.
+ScSmOP is a universal pipeline capable of performing data processing for a wide range of single-cell single-molecule omics like scRNA-seq, scATAC-seq, ChIA-Drop, SPRITE and its derivates, Drop-seq and some other techniques which based on barcode and UMI. It have pre-prepared several pipelines for current popular which can be easily launched with some simple editions. Detail description and cases of study please see [ScSmOP Wiki](https://github.com/ZhengmzLab/ScSmOP/wiki).
+
+![image](https://github.com/tianzhongyuan/material/blob/main/ScSmOP_operation.png)
 
 ## OS env
 
@@ -122,118 +124,23 @@ Then build STAR reference genome:
 
 ## Run ScSmOP on different experiment data
 
-We've prepared several pipelines for easy data process, if your experiment meet the listed experiment, you can process your data as in [Easy Process](#easy-process).
+We've prepared several pipelines for easy data process, if your experiment meet the listed experiment, you can process your data as in Easy Process.
 
-<html>
- <head>
-  <meta charset="utf-8" />
-  <title>SheetJS Table Export</title>
- </head>
- <body>
-  <table>
-   <tr>
-    <td t="s" id="sjs-A1">Omics</td>
-    <td t="s" id="sjs-B1">Experiment</td>
-    <td t="s" id="sjs-C1">Barcode(s) length</td>
-    <td t="s" id="sjs-D1">UMI length</td>
-    <td t="s" id="sjs-E1" white-space: nowrap>Read structure</td>
-    <td t="s" id="sjs-F1" white-space: nowrap>Parameter (-t)</td>
-    <td t="s" id="sjs-G1">Source</td>
-   </tr>
-   <tr>
-    <td rowspan="3" t="s" id="sjs-A2" white-space: nowrap>scRNA-seq</td>
-    <td t="s" id="sjs-B2">10× Genomics (v2) Single Cell Gene Expression</td>
-    <td t="n" id="sjs-C2">16</td>
-    <td t="n" id="sjs-D2">10</td>
-    <td t="s" id="sjs-E2">R1: Barcode-UMI&#x000d;
-     <br />R2: Transcript</td>
-    <td t="s" id="sjs-F2">scrna_10x_v2</td>
-    <td t="s" id="sjs-G2">https://github.com/10XGenomics/cellranger/raw/master/lib/python/cellranger/barcodes/737K-august-2016.txt</td>
-   </tr>
-   <tr>
-    <td t="s" id="sjs-B3">10× Genomics (v3) Single Cell Gene Expression</td>
-    <td t="n" id="sjs-C3">16</td>
-    <td t="n" id="sjs-D3">12</td>
-    <td t="s" id="sjs-E3">R1: Barcode-UMI&#x000d;
-     <br />R2: Transcript</td>
-    <td t="s" id="sjs-F3">scrna_10x_v3</td>
-    <td t="s" id="sjs-G3">https://github.com/10XGenomics/cellranger/raw/master/lib/python/cellranger/barcodes/3M-february-2018.txt.gz</td>
-   </tr>
-   <tr>
-    <td t="s" id="sjs-B4">Drop-seq</td>
-    <td t="n" id="sjs-C4">12</td>
-    <td t="n" id="sjs-D4">8</td>
-    <td t="s" id="sjs-E4" white-space: nowrap>R1: Barcode-UMI&#x000d;
-     <br />R2: Transcript</td>
-    <td t="s" id="sjs-F4">dropseq</td>
-    <td t="z" id="sjs-G4"></td>
-   </tr>
-   <tr>
-    <td t="s" id="sjs-A5">ChIA-Drop</td>
-    <td t="s" id="sjs-B5">ChIA-Drop</td>
-    <td t="n" id="sjs-C5">16</td>
-    <td t="s" id="sjs-D5">N/A</td>
-    <td t="s" id="sjs-E5" white-space: nowrap>R1: Barcode-DNA&#x000d;
-     <br />R2: DNA</td>
-    <td t="s" id="sjs-F5">chiadrop</td>
-    <td t="s" id="sjs-G5">longranger-2.2.2/longranger-cs/2.2.2/tenkit/lib/python/tenkit/barcodes/4M-with-alts-february-2016.txt-</td>
-   </tr>
-   <tr>
-    <td t="s" id="sjs-A6" white-space: nowrap>scATAC-seq</td>
-    <td t="s" id="sjs-B6">10× Genomics (v2) Single Cell ATAC</td>
-    <td t="n" id="sjs-C6">16</td>
-    <td t="s" id="sjs-D6">N/A</td>
-    <td t="s" id="sjs-E6"white-space: nowrap>R1: DNA&#x000d;
-     <br />R2: Barcode&#x000d;
-     <br />R3: DNA</td>
-    <td t="s" id="sjs-F6">scatac_10x_v1</td>
-    <td t="s" id="sjs-G6">cellranger-atac-2.1.0/lib/python/atac/barcodes/737K-cratac-v1.txt.gz</td>
-   </tr>
-   <tr>
-    <td rowspan="3" t="s" id="sjs-A7" white-space: nowrap>SPRITE and derivates</td>
-    <td t="s" id="sjs-B7">SPRITE</td>
-    <td t="s" id="sjs-C7">4 kinds with 5 rounds</td>
-    <td t="s" id="sjs-D7">N/A</td>
-    <td t="s" id="sjs-E7" white-space: nowrap>R1: DPM-DNA&#x000d;
-     <br />R2: Y-ODD-EVEN-ODD</td>
-    <td t="s" id="sjs-F7">sprite</td>
-    <td t="s" id="sjs-G7">GSE114242: GSE114242_human_config.txt.gz</td>
-   </tr>
-   <tr>
-    <td t="s" id="sjs-B8">RD-SPRITE</td>
-    <td t="s" id="sjs-C8">5 kinds with 5 rounds (label DNA with DPM, label RNA with RPM)</td>
-    <td t="s" id="sjs-D8">N/A</td>
-    <td t="s" id="sjs-E8" white-space: nowrap>R1: DNA/RNA&#x000d;
-     <br />R2: Y-ODD-EVEN-ODD-DPM/RPM <br />
-     (DPM: DNA, RPM: RNA)</td>
-    <td t="s" id="sjs-F8">rdsprite</td>
-    <td t="s" id="sjs-G8">https://github.com/GuttmanLab/sprite2.0-pipeline/blob/master/config.txt</td>
-   </tr>
-   <tr>
-    <td t="s" id="sjs-B9">Single-cell SPRITE</td>
-    <td t="s" id="sjs-C9">4 kinds with 6 rounds (label cells with first last 3 barcodes in Read 2, label complex with all six barcodes)</td>
-    <td t="s" id="sjs-D9">N/A</td>
-    <td t="s" id="sjs-E9" white-space: nowrap>R1: DNA&#x000d;
-     <br />R2: Y-EVEN-ODD-EVEN-ODD-DPM</td>
-    <td t="s" id="sjs-F9">scsprite</td>
-    <td t="s" id="sjs-G9">https://github.com/caltech-bioinformatics-resource-center/Guttman_Ismagilov_Labs/blob/master/scSPRITE/misc/config_dpm6_y-stag_scSPRITE.txt</td>
-   </tr>
-   <tr>
-    <td t="s" id="sjs-A10">scARC-seq</td>
-    <td t="s" id="sjs-B10">10× Genomics Single Cell Multiome ATAC + Gene Expression</td>
-    <td t="s" id="sjs-C10">Gene Expression library: 16, ATAC library: 16</td>
-    <td t="s" id="sjs-D10">Gene Expression library: 12; ATAC library: N/A</td>
-    <td t="s" id="sjs-E10">R1: DNA (R1 in ATAC)&#x000d;
-     <br />R2: Barcode (R2 in ATAC)&#x000d;
-     <br />R3: DNA (R3 in ATAC)&#x000d;
-     <br />R4: Barcode-UMI (R1 in GEX)&#x000d;
-     <br />R5: Transcript (R2 in GEX)</td>
-    <td t="s" id="sjs-F10">scarc_10x_v1</td>
-    <td t="s" id="sjs-G10">737K-arc-v1-scrna.txt:cellranger-arc-2.0.2/lib/python/cellranger/barcodes/737K-arc-v1.txt.gz; 737K-arc-v1-scatac.txt:cellranger-arc-2.0.2/lib/python/atac/barcodes/737K-arc-v1.txt.gz</td>
-   </tr>
-  </table>
- </body>
-</html>
+### [ScSmOP Supported Techology](#ScSmOPSuppTech).
+
+|Omics|Technology|Barcode(s) length|UMI length|Read structure|Method ID (-t)|
+|:----|:----|:----|:----|:----|:----|
+|scRNA-seq|10× Genomics (v2) Single Cell Gene Expression|16|10|R1: Barcode-UMI; R2: Transcript|scrna_10x_v2|
+|scRNA-seq|10× Genomics (v3) Single Cell Gene Expression|16|12|R1: Barcode-UMI; R2: Transcript|scrna_10x_v3|
+|scRNA-seq|Drop-seq|12|8|R1: Barcode-UMI; R2: Transcript|dropseq|
+|ChIA-Drop|ChIA-Drop|16|N/A|R1: Barcode-DNA; R2: DNA|chiadrop|
+|scATAC-seq|10× Genomics (v2) Single Cell ATAC|16|N/A|R1: DNA; R2: Barcode; R3: DNA|scatac_10x_v1|
+|SPRITE and derivates|SPRITE|4 kinds with 5 rounds|N/A|R1: DPM-DNA; R2: Y-ODD-EVEN-ODD|sprite|
+|SPRITE and derivates|RD-SPRITE|5 kinds with 5 rounds (label DNA with DPM, label RNA with RPM)|N/A|R1: DNA/RNA; R2: Y-ODD-EVEN-ODD-DPM/RPM (DPM: DNA, RPM: RNA)|rdsprite|
+|SPRITE and derivates|Single-cell SPRITE|4 kinds with 6 rounds (label cells with first last 3 barcodes in Read 2, label complex with all six barcodes)|N/A|R1: DNA; R2: Y-EVEN-ODD-EVEN-ODD-DPM|scsprite|
+|scARC-seq|10× Genomics Single Cell Multiome ATAC + Gene Expression|Gene Expression library: 16, ATAC library: 16|Gene Expression library: 12; ATAC library: N/A|R1: DNA (R1 in ATAC); R2: Barcode (R2 in ATAC); R3: DNA (R3 in ATAC); R4: Barcode-UMI (R1 in GEX); R5: Transcript (R2 in GEX)|scarc_10x_v1|
+
+
 
 ### Easy process
 
@@ -245,7 +152,7 @@ Different experiment require different parameters:
 ```
     (ScSmOP) ~:$ ~/ScSmOP/scsmop.sh 
 
-    Usage: scsmop.sh [options] -t [STR] -n [STR] -1 [FILE] -2 [FILE] -r [DIR]
+    Usage: ./scsmop.sh [options] -t [STR] -n [STR] -1 [FILE] -2 [FILE] -r [DIR]
         -t Experiment type: sprite, scsprite, rdsprite, chiadrop, scrna_10x_v3, scrna_10x_v2, dropseq, scatac_10x_v1, scarc_10x_v1.
         -n Library name.
         -1 Read 1 FASTQ.
@@ -264,9 +171,13 @@ Different experiment require different parameters:
     Processing scARC-seq, specify FASTQs through -1 ATAC R1 -2 ATAC R2 -3 ATAC R3 -4 GEX R1 -5 GEX R2, others refer to the table at Github.
     Processing chiadrop, scatac_10x_v1, scarc_10x_v1 requires genome chromosome sizes file showing chromosome length, specify with -s [FILE].
 
-    Universal pipeline for multi-omics data process: <https://github.com/ZhengmzLab/ScSmOP/wiki>.
+   
 ```
 
-## Customize for your own barcoding method
+## Other Information in ScSmOP Wiki
+* [Case of Study](https://github.com/ZhengmzLab/ScSmOP/wiki/Case-of-Study)
+* [ScSmOP Module Configuration](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Module-Configuration)
+* [ScSmOP Standard Output](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Standard-Output)
+* [Case of DIY](https://github.com/ZhengmzLab/ScSmOP/wiki/Case-of-Study#11-diy)
+* [ScSmOP Testing Dataset](https://github.com/ZhengmzLab/ScSmOP-Testing-Dataset)
 
-Please refer to the paper or the [wiki](https://github.com/ZhengmzLab/ScSmOP/wiki).
