@@ -20,7 +20,7 @@ First, download ScSmOP to your computer:
 
 ```
     # Get ScSmOP source using git
-    :~$ git clone https://github.com/kasenjing/ScSmOP.git
+    :~$ git clone https://github.com/ZhengmzLab/ScSmOP.git
     :~$ cd ScSmOP
 
     # Alternatively, get latest ScSmOP source from releases
