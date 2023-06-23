@@ -177,5 +177,4 @@ Different experiment require different parameters:
 * [ScSmOP Module Configuration](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Module-Configuration)
 * [ScSmOP Standard Output](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Standard-Output)
 * [Case of DIY](https://github.com/ZhengmzLab/ScSmOP/wiki/Case-of-Study#11-diy)
-* [ScSmOP Testing Dataset](https://github.com/ZhengmzLab/ScSmOP-Testing-Dataset)
 
