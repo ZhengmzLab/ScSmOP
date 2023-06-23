@@ -120,11 +120,11 @@ Then build STAR reference genome:
     ~/RefGenome/refdata-gex-GRCh38-2020-A-STAR/
 ```
 
-## 5. Run ScSmOP on different experiment data
+## 5. Run ScSmOP on various types of data
 
 We've prepared several pipelines for easy data process, if your experiment meet the listed experiment, you can process your data as in Easy Process.
 
-### 5.1 [ScSmOP Supported Techology](#ScSmOPSuppTech).
+### 5.1 [ScSmOP Supported Techology](#ScSmOPSuppTech)
 
 |Omics|Technology|Barcode(s) length|UMI length|Read structure|Method ID (-t)|
 |:----|:----|:----|:----|:----|:----|
