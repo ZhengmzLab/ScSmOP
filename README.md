@@ -116,7 +116,7 @@ Then build STAR reference genome:
 **Suppose STAR index has been generated**
 
 ```
-(~/RefGenome/refdata-gex-GRCh38-2020-A-STAR/
+~/RefGenome/refdata-gex-GRCh38-2020-A-STAR/
 ```
 
 ## 5. Run ScSmOP on various types of data
