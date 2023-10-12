@@ -2,6 +2,8 @@
 
 Single cell Single Molecule Multiple Omics Pipeline.
 
+Kai Jing, Yewen Xu, Yang Yang, Pengfei Yin, Duo Ning, Guangyu Huang, Yuqing Deng, Gengzhan Chen, Guoliang Li, Simon Zhongyuan Tian, Meizhen Zheng, **ScSmOP: a universal computational pipeline for single-cell single-molecule multiomics data analysis**, Briefings in Bioinformatics, Volume 24, Issue 6, November 2023, bbad343, https://doi.org/10.1093/bib/bbad343
+
 -----------
 
 ScSmOP is a general-purpose pipeline that works for processing the “one barcode one group” type of state-of-art multiomics data, such as the (i) “single-cell single-molecule multiple chromatin interaction” type of scSPRITE method, (ii) “single-molecule multi-way chromatin (DNA/RNA) interaction” type of ChIA-Drop, SPRITE, and RD-SPRITE methods, (iii) “single-cell multiomics methods” type of scRNA-seq, Drop-seq, scATAC-seq, sc(ATAC+RNA)-seq methods, (iv) and even “single-position single-cell expression” type of spatial transcriptomics. In summary, these “one barcode one group” barcoding methods are based on two types of strategies: the ligation-based barcoding strategy and synthesis-based barcoding strategy.  In this study, the developed ScSmOP can not only be applied to a variety of “barcode” types of single-cell and/or single-molecule multiplex omics techniques but also supplies an interface for users to “DIY” a pipeline for their customized barcodes. Detail description and cases of study please see [ScSmOP Wiki](https://github.com/ZhengmzLab/ScSmOP/wiki).
