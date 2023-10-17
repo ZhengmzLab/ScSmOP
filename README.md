@@ -26,7 +26,7 @@ $ cd ScSmOP
 # Alternatively, get latest ScSmOP source from releases
 $ wget https://github.com/ZhengmzLab/ScSmOP/archive/refs/tags/v1.0.tar.gz
 $ tar -zxvf v1.0.tar.gz
-$ cd ScSmOP/
+$ cd ScSmOP-1.0/
 ```
 
 ### 2.1 Linux has Conda:
