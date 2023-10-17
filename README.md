@@ -20,13 +20,13 @@ First, download ScSmOP to your computer:
 
 ```
 # Get ScSmOP source using git
-$ git clone https://github.com/ScSmOP/ScSmOP.git
+$ git clone https://github.com/ZhengmzLab/ScSmOP.git
 $ cd ScSmOP
 
 # Alternatively, get latest ScSmOP source from releases
 $ wget https://github.com/ZhengmzLab/ScSmOP/archive/refs/tags/v1.0.tar.gz
-$ tar -zxvf v0.1.3.tar.gz
-$ cd ScSmOP-0.1.3
+$ tar -zxvf v1.0.tar.gz
+$ cd ScSmOP/
 ```
 
 ### 2.1 Linux has Conda:
@@ -52,7 +52,7 @@ This will automatically install Conda tools, create a Conda environment "ScSmOP"
 **Activate Conda env**
 
 ```
-$ /Tools/miniconda3/bin/conda init bash
+$ ./Tools/miniconda3/bin/conda init bash
 $ exit
 
 # Reopen a terminal
