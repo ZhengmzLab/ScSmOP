@@ -49,6 +49,8 @@ This will automatically install Conda tools, create a Conda environment "ScSmOP"
 
 ***Warings during installation do not affect ScSmOP usage, ignore them.***
 
+***if user has trouble on installation please see wiki for detail: [ScSmOP Installation Checking](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Installation-Checking)***
+
 **Activate Conda env**
 
 ```
@@ -178,5 +180,4 @@ Processing chiadrop, scatac_10x_v1, scarc_10x_v1 requires genome chromosome size
 * [ScSmOP Module Configuration](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Module-Configuration)
 * [ScSmOP Standard Output](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Standard-Output)
 * [Case Study of DIY](https://github.com/ZhengmzLab/ScSmOP/wiki/Case-Study#11-diy)
-
-
+* [ScSmOP Installation Checking](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Installation-Checking)
