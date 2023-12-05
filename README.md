@@ -49,7 +49,7 @@ This will automatically install Conda tools, create a Conda environment "ScSmOP"
 
 ***Warings during installation do not affect ScSmOP usage, ignore them.***
 
-***if user has trouble on installation please see wiki for detail: [ScSmOP Installation Checking](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Installation-Checking)***
+***If user has trouble on installation please see wiki for detail: [ScSmOP Installation Checking](https://github.com/ZhengmzLab/ScSmOP/wiki/ScSmOP-Installation-Checking)***
 
 **Activate Conda env**
 
